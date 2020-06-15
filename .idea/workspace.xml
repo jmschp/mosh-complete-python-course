@@ -1,21 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="03cf2090-ba9c-476f-920a-b95c59e128e5" name="Default Changelist" comment="" />
+    <list default="true" id="03cf2090-ba9c-476f-920a-b95c59e128e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/HelloWorld.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01 Getting Started.app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-01 Primitive Types app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-04 Escape Sequences app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-05 Formatted Strings app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-06 String Methods app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-07 Numbers app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-08 Working with Numbers app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-09 Type Conversion app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-10 Quiz app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-01 Comparison operators app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-02 Conditional Statements app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-03 Ternary Operator app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-04 Logical Operators app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-06 Chaining Comparison Operators app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-08 For Loops app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-09 For Else app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-10 Nested Loops app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-11 Iterables app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-12 While Loops app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-13 Infinte Loops app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-14 Exercice app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-01 Defining Functions app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-02 Arguments app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-03 Types of Functions app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-04 Keyword Arguments app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-05 Default Arguments aap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-06 xargs app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-07 xxargs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-08 Scope.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-09 Debugging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04-12 Exercise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-01 Lists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-02 Accessing Items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-03 List Unpacking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-04 Looping over Lists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-05 Adding or Removing .py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-06 Finding Items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-07 Sorting Lists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-08 Lambda Functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-09 Map Function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-10 Filter Function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1a0saOlZ7QsXgBT11McD6ByPq1U" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jmigu\iCloudDrive\Os meus documentos\Educação\Code With Mosh\The Complete Python Course\HelloWorld" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.DIO">
+    <configuration name="05-10 Filter Function" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05-10 Filter Function.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DIO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DIO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.DIO" />
+        <item itemvalue="Python.05-10 Filter Function" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -30,7 +155,47 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="-1251" y="-190" key="#05-10_Filter_Function" timestamp="1591781401818">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state x="-1251" y="-190" key="#05-10_Filter_Function/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591781401818" />
+    <state x="-1180" y="-30" key="FileChooserDialogImpl" timestamp="1591782815568">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="-30" key="FileChooserDialogImpl/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591782815568" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1591783647031">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591783647031" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1591783647031">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591783647031" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1591783647030">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591783647030" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1591783647031">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1591783647031" />
+    <state x="-1459" y="-140" key="SettingsEditor" timestamp="1592156265354">
+      <screen x="-1920" y="-305" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="-140" key="SettingsEditor/0.0.1366.728/-1920.-305.1920.1040@-1920.-305.1920.1040" timestamp="1592156265354" />
     <state x="-1187" y="-5" key="com.intellij.ide.util.TipDialog" timestamp="1585883922910">
       <screen x="-1920" y="-313" width="1920" height="1040" />
     </state>
