@@ -1,7 +1,7 @@
 # 6 - String Methods
 course_name_python = "  python programming for beginners    "
 # String method to convert to upper case
-print(course_name_python.upper())
+print(course_name_python.upper()\n)
 # String method to convert to lower case
 print(course_name_python.lower())
 # String method to convert to upper case first letter of each word
