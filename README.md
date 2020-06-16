@@ -14,6 +14,7 @@ Code with Mosh - The Complete Python Course
     1.10 Python Implementations (2:28)
     1.11 How Python Code is Executed (2:46)
     1.12 Quiz (1:37)
+    
 2 Primitive Types (34m)
     2.1 Variables (3:04)
     2.2 Variable Names (3:02)
@@ -25,6 +26,7 @@ Code with Mosh - The Complete Python Course
     2.8 Working with Numbers (2:09)
     2.9 Type Conversion (5:04)
     2.10 Quiz (2:43)
+    
 3 Control Flow (37m)
     3.1 Comparison Operators (2:04)
     3.2 Conditional Statements (4:09)
@@ -40,6 +42,7 @@ Code with Mosh - The Complete Python Course
     3.12 While Loops (4:59)
     3.13 Infinite Loops (1:37)
     3.14 Exercise (2:05)
+    
 4 Functions (41m)
     4.1 Defining Functions (2:24)
     4.2 Arguments (2:20)
@@ -54,6 +57,7 @@ Code with Mosh - The Complete Python Course
     4.11 VSCode Coding Tricks - Mac (1:49)
     4.12 Exercise (1:29)
     4.13 Solution (4:41)
+    
 5 Data Structures (1h20m)
     5.1 Lists (3:54)
     5.2 Accessing Items (3:13)
@@ -78,6 +82,7 @@ Code with Mosh - The Complete Python Course
     5.21 Generator Expressions (3:51)
     5.22 Unpacking Operator (4:05)
     5.23 Exercise (6:21)
+    
 6 Exceptions (20m)
     6.1 Exceptions (2:16)
     6.2 Handling Exceptions (4:10)
@@ -86,6 +91,7 @@ Code with Mosh - The Complete Python Course
     6.5 The With Statement (3:07)
     6.6 Raising Exceptions (3:21)
     6.7 Cost of Raising Exceptions (4:41)
+    
 7 Classes (1h25m)
     7.1 Classes (2:35)
     7.2 Creating Classes (3:45)
@@ -109,6 +115,7 @@ Code with Mosh - The Complete Python Course
     7.20 Duck Typing (2:50)
     7.21 Extending Built-in Types (2:26)
     7.22 Data Classes (4:36)
+    
 8 Modules (20m)
     8.1 Creating Modules (4:16)
     8.2 Compiled Python Files (2:19)
@@ -118,6 +125,7 @@ Code with Mosh - The Complete Python Course
     8.6 Intra-package References (1:36)
     8.7 The dir Function (1:39)
     8.8 Executing Modules as Scripts (2:55)
+    
 9 Python Standard Library (1h)
     9.1 Python Standard Library (0:51)
     9.2 Working With Paths (4:48)
@@ -136,6 +144,7 @@ Code with Mosh - The Complete Python Course
     9.15 Templates (4:53)
     9.16 Command-line Arguments (1:54)
     9.17 Running External Programs (8:06)
+    
 10 Python Package Index (1h30m)
     10.1 Pypi (1:49)
     10.2 Pip (6:23)
@@ -147,6 +156,7 @@ Code with Mosh - The Complete Python Course
     10.8 Publishing Packages (8:22)
     10.9 Docstrings (5:48)
     10.10 Pydoc (4:06)
+    
 11 Popular Python Packages (1h30m)
     11.1 Introduction (1:41)
     11.2 What are APIs (2:36)
@@ -160,6 +170,7 @@ Code with Mosh - The Complete Python Course
     11.10 Working with Excel Spreadsheets (9:52)
     11.11 Command Query Separation Principle (4:39)
     11.12 NumPy (9:05)
+    
 12 Building Web Applications with Django (30m)
     12.1 Introduction (1:43)
     12.2 Your First Django Project (4:11)
@@ -183,6 +194,7 @@ Code with Mosh - The Complete Python Course
     12.20 Adding the Homepage (4:27)
     12.21 Getting Ready to Deploy (9:44)
     12.22 Deployment (7:59)
+    
 13 Machine Learning with Python (30m)
     13.1 What is Machine Learning (1:58)
     13.2 Machine Learning in Action (2:47)
@@ -197,4 +209,3 @@ Code with Mosh - The Complete Python Course
     13.11 Visualizing a Decision Tree (6:26)
     13.12 What to Learn Next
     13.13 Thank You
-    
