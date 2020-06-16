@@ -2,7 +2,7 @@
 Code with Mosh - The Complete Python Course
 
 1 Getting Started (32m)
-    1.1 What is Python (3:21)
+	1.1 What is Python (3:21)
     1.2 Installing Python (1:52)
     1.3 Python Interpreter (1:55)
     1.4 Code Editors (1:19)
