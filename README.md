@@ -1,20 +1,31 @@
-# mosh-complete-python-course
-Code with Mosh - The Complete Python Course
+###### # mosh-complete-python-course
 
-## 1. Getting Started (32m)
-	1.1. What is Python (3:21)
-	1.2. Installing Python (1:52)
-	1.3. Python Interpreter (1:55)
-	1.4. Code Editors (1:19)
-	1.5. Your First Python Program (3:36)
-	1.6. Python Extension (2:52)
-	1.7. Linting Python Code (4:14)
-	1.8. Formatting Python Code (3:54)
-	1.9. Running Python Code (2:59)
-	1.10. Python Implementations (2:28)
-	1.11. How Python Code is Executed (2:46)
-	1.12. Quiz (1:37)
-## 2. Primitive Types (34m)
+# Code with Mosh
+## The Complete Python Course
+
+[https://programmingwithmosh.com/](https://programmingwithmosh.com/ "https://programmingwithmosh.com/")
+[https://codewithmosh.com/](https://codewithmosh.com/ "https://codewithmosh.com/")
+
+------------
+[![Python](https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BFMMlbcQvml9HSqXcvNp "Python")](https://codewithmosh.com/courses/ "Python")
+
+#### 1. Getting Started (32m)
+1.1. What is Python (3:21)
+1.2. Installing Python (1:52)
+1.3. Python Interpreter (1:55)
+1.4. Code Editors (1:19)
+1.5. Your First Python Program (3:36)
+1.6. Python Extension (2:52)
+1.7. Linting Python Code (4:14)
+1.8. Formatting Python Code (3:54)
+1.9. Running Python Code (2:59)
+1.10. Python Implementations (2:28)
+1.11. How Python Code is Executed (2:46)
+1.12. Quiz (1:37)
+
+------------
+
+#### 2. Primitive Types (34m)
 	2.1. Variables (3:04)
 	2.2. Variable Names (3:02)
 	2.3. Strings (5:30)
