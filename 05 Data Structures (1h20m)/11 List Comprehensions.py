@@ -11,7 +11,7 @@ print(products)
 # prices = list(map(lambda item: item[1], products))
 # print(prices)
 
-prices = [item[1] for item in products] # With list comprehensions we can achive tehe same result with a clenaer code
+prices = [item[1] for item in products] # With list comprehensions we can achive the same result with a clenaer code
 print(prices)
 
 
