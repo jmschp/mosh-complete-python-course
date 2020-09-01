@@ -1,0 +1,11 @@
+05 Hiding API Keys
+
+In the previous lesson we stored our API key in our code.
+That's a bad practice, because if we publish our code to git this API key will be visible to anyone.
+We should store our API Key in another file and exclude taht file from git.
+
+Add a new file "config.py" which will store all sort of configuraton arameters for our application, including the API Key
+Them in our aplication we must import the "config" module and in the module we have an attribute call "api_key"
+
+To exclude this file from git. Add a new file and call it ".gitignore".
+There we can specify whats file and directories should be excluded from our git repository.

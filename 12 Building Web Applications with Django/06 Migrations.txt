@@ -1,0 +1,43 @@
+06 Migrations
+
+After creating our models classes we should be able to store the models in a data base.
+
+The Django admin automatically created a sqlite data base for us. Se file "db.sqlite3"
+Django supports other data base engines apart from SQLite.
+
+Currently we don't have any tables in our data base.
+We don't have to create the manualy, Django will do it based on our models.
+
+Every time we create new model clases or modify existing ones we tell Django to compare, our models classes with our data base.
+Django will look at the data base, it will figure out what tables and clomun we have, and calculate te difference between our models and the data base.
+And base on that it will create a migration. That is essencial a Python file, that includes some code.
+When we run that file it will synchronize our data base with our models classes.
+
+First we need to register our movies app with Django. We do that in the "settings.py" from the main app "fidly". in the installed apps list
+It comes with pre installed app from Django.
+We must add the path to the class in the "apps.py" module from the "movies" app.
+
+INSTALLED_APPS = [
+    'django.contrib.admin', # This creates an administration panel
+    'django.contrib.auth', # This is an authentication framework, that will authenticate user and what permissions the have.
+    'django.contrib.contenttypes', # This is framwork to create genmeric relationships between model classes.
+    'django.contrib.sessions', # This is a framework that aloows us to temporaly store information about the current user.
+    'django.contrib.messages', # We use this in situations to redirect a user and display a message. For exemple when a user creates a new movie and we display a message like "the movie was successful created". 
+    'django.contrib.staticfiles', # This is use to manage static files like css files images and so on.
+    'movies.apps.MoviesConfig'
+]
+
+Then we run the following command to create the migration file:
+> python manage.py makemigrations
+
+It will detect the the new classes in the "models.py" module form the movies app, and create a migration file.
+In the movies\migrations\0001_initial.py.
+
+This migration it is no executed yet. It simples describes the operations that need to be done to update the data base accordingly to our model classes from the movies app.
+
+The next step is to run this migration with the comand:
+> python manage.py migrate
+
+This will run all the pending migrations on our data base.
+
+

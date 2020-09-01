@@ -1,0 +1,46 @@
+04 Importing a Data Set
+
+We are going to downlad a data set from Kaggle.
+https://www.kaggle.com/
+
+Kaggle is basicaly a place to do sata science projects.
+Kaggle, a subsidiary of Google LLC, is an online community of data scientists and machine learning practitioners.
+Kaggle allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges.
+
+Download a data set of video game sales.
+https://www.kaggle.com/gregorut/videogamesales
+
+Extract and place in the same folder as the Jupyter notebook. In may case desktop.
+
+In the Jupyter notebook
+
+Import  the panda module to read the ".csv" file
+
+import pandas as pd
+
+df = pd.read_csv("vgsales.csv")
+
+The "read_csv()" function returns a data frame objects
+
+df. shape
+This will return the shape of the data frame. Rows and columns in a tupple (rows, columns)
+Thecnecaly this is a two dimensional.
+In our example return:
+(16598, 11) 
+
+df.describe()
+With the ".describe()" method we will get statistic info about our data frame.
+
+df. values
+This attribute returns a two dimension al array.
+In this example:
+array([[1, 'Wii Sports', 'Wii', ..., 3.77, 8.46, 82.74],
+       [2, 'Super Mario Bros.', 'NES', ..., 6.81, 0.77, 40.24],
+       [3, 'Mario Kart Wii', 'Wii', ..., 3.79, 3.31, 35.82],
+       ...,
+       [16598, 'SCORE International Baja 1000: The Official Game', 'PS2',
+        ..., 0.0, 0.0, 0.01],
+       [16599, 'Know How 2', 'DS', ..., 0.0, 0.0, 0.01],
+       [16600, 'Spirits & Spells', 'GBA', ..., 0.0, 0.0, 0.01]],
+      dtype=object)
+

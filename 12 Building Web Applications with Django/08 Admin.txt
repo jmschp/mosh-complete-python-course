@@ -1,0 +1,23 @@
+08 Admin
+
+We are going to activate the administation panel.
+If we navigate to http://127.0.0.1:8000/admin/ we can see the authentication panel, to log in to the administration panel.
+This is coming from the "auth" app.
+
+The next step is to create a super user. That it is going to be the first user.
+For that we use the command:
+> python manage.py createsuperuser
+
+And follow the indicate steps in the terminal.
+
+To add the models to the administration interface
+Go to the "admin.py" in the "movies" app.
+And there we need to import the classes.
+
+from django.contrib import admin
+from .models import Genre, Movie # We use the "." to indicate the current folder.
+
+admin.site.register(Genre)
+admin.site.register(Movie)
+
+With those lines of code we register those classes in the administation panel. 

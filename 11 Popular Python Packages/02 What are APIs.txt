@@ -1,0 +1,5 @@
+02 What are APIs
+
+Application Programming Interfaces
+Are end point that are public accessible on the internet
+So they have url like websites

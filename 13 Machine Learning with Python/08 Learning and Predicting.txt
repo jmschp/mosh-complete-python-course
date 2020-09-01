@@ -1,0 +1,55 @@
+08 Learning and Predicting
+
+The next step is to build a model using ML algorithm.
+In this lesson we are going to use a simple algorithm called decision tree.
+
+This algorithms are already implemented in the "scikit-learn" librarie.
+This is the most popular machine learning in Python.
+So we need to import it.
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+The DecisionTreeClassifier implements the decision tree algorithm.
+So we need to create an instace of thsi class.
+And we set it to the variable "model".
+
+model = DecisionTreeClassifier()
+
+
+No we have a model so we need to train it to learn patterns in the data set.
+To do that we call the method ".fit()". This method takes two data set, the input and the output.
+
+model.fit(X, y)
+
+
+Next we need to ask our model to make a prediction.
+To do that we call the ".prediction()" method.
+This method takes a two deminsional array.
+In this tow deminsional array we pass a new input set.
+In our case we are passing two inputs simultaneous.
+A 21 year old male and a 22 year old female.
+We put the result in a variable called predictions.
+
+predictions = model.predict([[21, 1], [22, 0]])
+
+Result:
+array(['HipHop', 'Dance'], dtype=object)
+
+The model made an accurate prediction.
+Now we need to measure its accuracy.
+
+
+
+
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+
+music_data = pd.read_csv("music.csv")
+X = music_data.drop(columns="genre")
+y = music_data['genre']
+model = DecisionTreeClassifier()
+model.fit(X, y)
+music_data
+predictions = model.predict([[21, 1], [22, 0]])
+predictions

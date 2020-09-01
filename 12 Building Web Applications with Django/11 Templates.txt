@@ -1,0 +1,64 @@
+11 Templates
+
+Now we are going to use our view functions to render html content.
+In the "views.py" by default Django import the "render()" function from the "django.shortcuts" module.
+We use this function to render a template.
+
+
+The "render()" function as the following parameters:
+    "request" that is the request from the "index()" function.
+        We pass: request
+
+    "template_name" this is the naem of the template.
+        We pass: "movies\index.html"
+
+    "context" It is optional argument. It is a dictionary that we use to pass data to our template.
+        We pass: {"movies": movies}
+
+from django.shortcuts import render # importing the "render()" function
+from django.http import HttpResponse
+from .models import Movie
+
+def index(request):
+    movies = Movie.objects.all()
+    return render(request, "movies\index.html", {"movies": movies})  
+
+
+In the "movies" app we create a new folder and name it templates. By convention this is the name Django looks for.
+Inside the "templates" folder we create another folder with the name "movies".
+We do this so Django those not load other template from another app with the same template name.
+And that folder we create a new file "index.html"
+
+In the "index.html" we are going to create a table to display our movies
+if the language is set to html, we can use Zen Coding to create our table.
+
+thead>tr>th*4 # Press tabZen Coding for the table heading.
+tbody>tr>th*4 # Press tab Zen Coding for the table body.
+
+In the table body we want to render automatically the movies.
+For that we use Django template sintax
+{% %} We this we can execute some logic like a for loop or a conditional statment
+{{ }} We use doble curly brackets to render the value of a variable
+For faster writing use the djnago html plugin to use code snippets.
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Stock</th>
+            <th>Daily Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for movie in movies %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.numeber_in_stock }}</td>
+                <td>{{ movie.daily_rate }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

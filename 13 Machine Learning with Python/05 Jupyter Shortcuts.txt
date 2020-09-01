@@ -1,0 +1,30 @@
+05 Jupyter Shortcuts
+
+Some of the most useful shortcust in jupyter.
+
+When a cell is green, it means it is in edit mode and we can write code to it.
+When a ceel is blue it means it is in the command mode.
+
+Depending on the mode we have different shortcuts.
+In the command mode, press "h" to see the list of shortcuts.
+
+In command mode:
+"b"
+With the selected cell in command mode, press "b" to insert a new cell below the selected cell.
+"a"
+With the selected cell in command mode, press "a" to insert a new cell above the selected cell.
+"dd"
+Press "dd" to delete a cell.
+
+When we use the cell "Run" button it only runs the selected cell.
+To run all cells use the cell menu.
+
+The jupyter notebook file ".ipynb" include the source code organized in cell as well as the output for each cell.
+This is way it isa different from a ".py" file taht only as the source code.
+
+Use tab to see the available methods of an object.
+In this example type "df." an the press tab to see the methods of the data frame object.
+
+Place the the corsour on the name of the method press shift+tab to see the tooltip that describes waht the method those and what parameter it takes.
+
+

@@ -1,0 +1,7 @@
+08 Publishing Packages
+
+First we need to instal some tolls
+
+> pip install setuptools wheel twine
+
+https://packaging.python.org/tutorials/packaging-projects/

@@ -1,0 +1,89 @@
+19 Creating APIs
+
+We are going to build an APi for our movies.
+So some other site can send a request and get the list of our movies in json format.
+We are going to expose a new enpoint that starts with api.
+For example "api/movies/1"
+So other sites or app can sen an http request to this endpoint.
+
+
+There two packages recommend to build api in django
+
+django-tastypie
+This is a very simple package but works really good in samall application
+
+djangorestframework
+This framework is more complex and feature rich. Better fro large enterprise application
+
+For this lesson  we are goint to use
+django-tastypie
+
+First we install django-tastypie
+> pipenv install django-tastypie
+
+Then we need to create a new app in the project for the API.
+>python manage.py startapp api
+
+Now we need to register this app in the list of the install apps, in the "setting.py" module.
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'movies.apps.MoviesConfig',
+    'api.apps.ApiConfig'
+]
+
+Next in the "api" app we need to add a new model in the "models.py" module.
+In the world of API we refere to our models as resources.
+RESTful API
+REST stand for Representational State Transfer
+It's a convention that define how applications should talk to each other over http protocol.
+In the REST world we have url (uniform resourse locator) with an url we can locate a resourse. In our case movies.
+
+In the "models.py" module we need to create a movies resourse class that derives from the "ModelResource" class in the "tastypie.resources".
+Tastypie looks for an inner class in this class called "Meta", so we need to add that inner class. This class defines metadata about our movies resources.
+Then we have to add some attributes that tastypie looks for.
+
+The first attribute "queryset" and we need to set it to the list of all the movies.
+To do that we need to import the "Movie" class from the "movies.models" module, and set the "queryset" variable to "Movie.objects.all()".
+This "all()" method returns a query.
+This query will be executed some point in the future when some one call our API. This is what we call lazy loading. So this query object is a lazy object.
+
+The second attributes we need to set is "resourse_name" and this defines how our endpoint will look like.
+In our case we set it to movies. So latter we will have an API available at "api/movies".
+We can use the "excludes" attribute to exclude data we do not want to show in our API. In this example the "date_created", that is only used internally in our app.
+
+from django.db import models
+from tastypie.resources import ModelResource
+from movie.models import Movie
+
+class MovieResource(ModelResource):
+    class Meta:
+        queryset = Movie.objects.all()
+        resourse_name = "movies"
+        excludes = ["date_created"]
+
+
+The next step is to generate our url endpoints.
+In the main app "fidly" open the "urls.py" module.
+We first need to import the "MovieResource" from the "api.models" module.
+And then instanciate and object with the "ModelResource()" class 
+This object, after beeing instaciated with the "ModelResource()" class, as a property called ".urls"
+This attribute return the urls for this movie resource, based on the "resourse_name" we set in the "model.py" module from the "api" app.
+
+from django.contrib import admin
+from django.urls import path, include
+from api.models import MovieResource
+
+movie_resourse = MovieResource()
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('movies/', include('movies.urls')),
+    path('api/', include(movie_resourse.urls))
+]
+

@@ -1,0 +1,46 @@
+20 Adding the Homepage
+
+When we create a new "urlpatterns" in the "urls.py" module in the main app "fidly", Django stops displaying the default Homepage.
+So we need to manualy create a new home page.
+
+First we need to create a new "views.py" file in the "fidly" app folder.
+In that file we need to define a new funtion, to render an html template.
+So import the "render()" function.
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, "home.html")
+
+The render functions takes a "request" as the first argument, and the second argument the template.
+In this function we do not need to pass the third argument "context" object, because in this case we are not going to display any data in the home page.
+
+Now we need to map this view function to a url endpoint, in the "urlpatterns" in the "urls.py" module in the main app "fidly".
+
+For that we do it the the following way
+    Function views
+        1. Add an import:  from my_app import views
+        2. Add a URL to urlpatterns:  path('', views.home, name='home')
+
+from . import views
+
+urlpatterns = [
+    path('', views.home, name="home"),
+    path('admin/', admin.site.urls),
+    path('movies/', include('movies.urls')),
+    path('api/', include(movie_resourse.urls))
+]
+
+
+Now we need to create an html template for the home page.
+
+One option is to add a "template" folder to the "fidly" app, just like we do in other app, like the "movies" app.
+If we do it like this we need to register this folder as an app in the "INSTALLED_APPS" list in the "setting.py" module.
+Because by default the main app, in this case "fidly", it is no registered as an app. Because actualy, it is not an app, like the "movies" app.
+To register it like this we also have to create in it the "apps.py" module with the class "FidlyConfig(AppConfig):"
+And then add this class to the "INSTALLED_APPS".
+After doing this Django will be able to find the 'templates" folser in the "fidly" app.
+
+
+Another option is to put all the general template, for the home page, about page, etc.., in the mainn "templates" folder in the root of the project.
+Thats the option we are using here.

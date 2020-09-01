@@ -1,0 +1,27 @@
+17 Raising 404 Errors
+
+To raise 404 errors we need to edit our view funtion.
+404 is the standard http error that states the page or the resourse we are looking for does not exist.
+
+We can do this in two way.
+One is put the view function in question inside a try block.
+And the eception derives from our model "Movie" so its like this "except Movie.DoesNotExist:'
+For this we need to the "Http404" class from the "django.http" module
+
+def detail(request, movie_id):
+    try:
+        movie = Movie.objects.get(pk=movie_id)
+        return render(request, "movies\detail.html", {"movie": movie})
+    except Movie.DoesNotExist:
+        raise Http404()
+
+Every time we want to get a single object and render it, we have to follow this pattern, Adding a "try:" statment
+
+
+To make this simpler, instead we can import the "get_object_or_404()" from the "django.shortcuts" module.
+We remove the "try:" block and replace the "Movie.objects.get()" with the "get_object_or_404()".
+As a fisrt argument to this function we must pass which model we are working with. In this case "Movie".
+
+def detail(request, movie_id):
+        movie = get_object_or_404(Movie, pk=movie_id)
+        return render(request, "movies\detail.html", {"movie": movie})

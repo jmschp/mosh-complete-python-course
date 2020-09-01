@@ -1,0 +1,5 @@
+01 What is Machine Learning
+
+Machine Learning
+Machine learning is a subset of AI
+We build a model or an engine and give it lots of data.

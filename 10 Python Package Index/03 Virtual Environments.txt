@@ -1,0 +1,29 @@
+03 Virtual Environments
+
+https://docs.python.org/3/library/venv.html
+https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
+
+In case we want to use a different version of a packages in an specific project.
+Let's say we need an older version, because our project is not compatible with the version we have installed.
+We need to create a virtual enviroment and install that package version there.
+
+In the project folder we use the command:
+> python -m venv <name of a folder to contain the virtual enviroment by convention we call it "env">
+> python -m venv env
+
+This will create a new directory with the following files and folders:
+Include
+Lib\site-packages
+Scripts
+pyvenv.cfg
+
+Once a virtual environment has been created, it can be “activated” using a script in the virtual environment’s binary directory.
+The invocation of the script is platform-specific (<venv> must be replaced by the path of the directory containing the virtual environment):
+
+Platform        Shell               Command to activate virtual environment
+POSIX           bash/zsh            $ source <venv>/bin/activate
+                ish                 $ . <venv>/bin/activate.fish
+                csh/tcsh            $ source <venv>/bin/activate.csh
+                PowerShell Core     $ <venv>/bin/Activate.ps1
+Windows         cmd.exe             C:\> <venv>\Scripts\activate.bat
+                PowerShell          PS C:\> <venv>\Scripts\Activate.ps1

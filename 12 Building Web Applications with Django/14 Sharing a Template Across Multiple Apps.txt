@@ -1,0 +1,37 @@
+14 Sharing a Template Across Multiple Apps
+
+To make our base template global for all the app.
+So all the app use the same base template.
+
+First create a new folder in the root folder named "templates".
+And move the base.html template to that folder.
+In our extends tag in other templates like the index.html, we change the reference to the new folder.
+
+{% extends 'movies/base.html' %} # remove the "movies\"
+{% extends 'base.html' %}
+
+Now we need to tell Django to look for templates in the new folder we created.
+Open the "setting.py" file and go the the templates section
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates', # this is the engine taht comes with Django and process aour template files.
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # This is directories that Django should look for templates. It's were we need to add aour new directory.
+        'APP_DIRS': True, # If set to True this tell Django to look for templates in the installed apps.
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+We need to go in the "os" module and then "path" module and then use the "join()" function.
+The "join()" function joins multiple path. As arguments to this funtion we pass:
+BASE_DIR # This is a know predefine variable in Django application. That indicates the base directory of the current application
+'template' # We joint the base directory path with ou templates folder
+
+os.path.join(BASE_DIR, "templates")

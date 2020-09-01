@@ -1,0 +1,39 @@
+10 Database Abstraction API
+
+Earlier we built a view function in the "movies" app to responde to request sento to the endpoint http://127.0.0.1:8000/movies
+We are going to modify this page to show the list of movies in this page.
+
+Our classes in "models.py" module derive from the "Model" class from the "django.db" module.
+The "Model" class gives us a bunch of method to work with the database.
+If we want to store a movie object in our data base we simply call one of this method called "save()".
+That "save()" method will internaly take care of generating the right SQL statement to update the database.
+This is what we call a Database Abstraction API.
+This "Model" class gives us an API, and this API abstracts way the complexity of working with the database.
+
+To use this API to get the list of movies form the data base.
+We import in the "view.py" the our class "Movie" from "models.py".
+
+In our "index()" function we can use statments like
+
+Movie.objects.all() # With this statment we can get all the movies objects in our data base. This will generete a SQL statment like this: SELECT * FROM movies_movie
+Movie.objects.filter(release_year=2009) # With this statment we can filter the movies objects in our data base, with a keyword argument. This will generete a SQL statment like this: SELECT * FROM movies_movie WHERE release_year=2009
+Movie.objects.get(id=1) # We use this statement to get a single object, by a keyword argument. In this case "id".
+
+There more method to save and delete objects from the data base, and so on.
+All this methods represent Database Abstraction API, that simplify a lot of cases.
+When we are dealing with more complex cases, and this methods do not do want we need, we can always send raw SQL statments to our database.
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Movie # Importing the "Movie" class
+
+def index(request):
+    movies = Movie.objects.all()
+    output = ", ".join([m.title for m in movies])
+    return HttpResponse("Hello World!")
+
+In this example we first get all the movies in our data.base, in the variable movies.
+Then we create a list comprehension, iterating over movies and extracting the title.
+And in the variable "output" we use the "join()" function to joint each title with a comma.
+
+This will display im the Terminator, "The Hangover, The Hangover Part II" in our page.

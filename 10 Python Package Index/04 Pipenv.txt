@@ -1,0 +1,22 @@
+# 04 Pipenv
+
+Pipenv is a tool that combines pip and virtual enveriomants into a single tool chain.
+
+Command to install Pipenv:
+> pip install pipenv
+
+Instead of using pip to install a package we use Pipenv
+> pipenv install <name of the packages>
+> pipenv install requests
+
+After it creates the virtual enviroment use to commad to see the path, but we do not need to use this path
+pipenv --venv
+
+C:\Users\jmigu\.virtualenvs\10_Python_Package_Index-osiHzKSp
+
+To activate the virtual enviroment use the following commads, inside th folder we are working, were we have the files "Pipfile.lock" and "Pipfile"
+
+> pipenv shell
+
+To deactivate use the following command
+> exit

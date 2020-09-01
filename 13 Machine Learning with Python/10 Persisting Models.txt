@@ -1,0 +1,23 @@
+10 Persisting Models
+
+
+We import our data set. Create a model. And train it. And ask it to make prerdictions.
+We do not need to go throw this flow every time.
+After we train our model we can save it to a file and and load the file to make predictions.
+
+For that we import the "joblib()" function from the "sklearn.externals" module.
+This funtions has methods to save and load models.
+
+To save the model after we train it, we call the ".dump()" method. This method takes to arguments. The model and the name of the file.
+
+from sklearn.externals import joblib
+joblib.dump(model, "music-recommender.joblib")
+
+This will create the joblib model in the same folder as our jupyter notebook. This is a binary file.
+music-recommender.joblib
+
+To load our model use the "load()" method.
+This will load our model to the "trained_model" variable.
+trained_model = joblib.load("music-recommender.joblib")
+
+This is how we persist and load models.

@@ -1,0 +1,13 @@
+06 Pipfile
+
+When we install a package using pipenv, two file are automactacly created.
+Pipfile
+Pipfile.lock
+
+This two file are used to keep track of dependecies of our project and their version.
+
+If we change to a different machine, with this to file just run the following comand to install the packages and its dependecies
+> pipenv install
+
+If we want to install the exact same versions, versions we need bo by pass "Pifile" and use "Pipfile.lock", with the following comand:
+> pipenv install --ignore-pipfile

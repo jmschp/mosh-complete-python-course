@@ -1,0 +1,61 @@
+18 Referencing Urls
+
+We are giong to add links to our movies tables so that we can navigate to the detail page.
+So we need to edit our "index.html" file, and insert the url referencing.
+There are several ways to do this we are goint to look at three ways.
+
+First way
+
+<tbody>
+    {% for movie in movies %}
+        <tr>
+            <td>
+            <a href="//movies/{{movie.id}}">{{ movie.title }}</a>
+            </td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.numeber_in_stock }}</td>
+            <td>{{ movie.daily_rate }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+
+This implementation works, but it is not the best way to do it. In the future if we change a url we have to change this in all the references to that url.
+
+
+The second way is better, we use the names that we assigned to the url to reference then.
+Inside a url tag
+{% url %}
+
+<tbody>
+    {% for movie in movies %}
+        <tr>
+            <td>
+            <a href="{% url "movies_detail" "movie.id" %}>{{ movie.title }}</a>
+            </td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.numeber_in_stock }}</td>
+            <td>{{ movie.daily_rate }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+
+
+The third way we have to make a small change to our "url.py".
+We add the variable "app_name" and set it to "movies" that is the name of the app.
+Django knows what the "app_name" is for, and if we set it.
+Then we can remove the "movie_" prefix fom the url name.
+
+
+<tbody>
+    {% for movie in movies %}
+        <tr>
+            <td>
+                <a href="{% url 'movies:detail' movie.id %}">{{ movie.title }}</a>
+        </td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.numeber_in_stock }}</td>
+            <td>{{ movie.daily_rate }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+

@@ -1,0 +1,13 @@
+16 Getting a Single Object
+
+We need to edit ou view function "detail()" in the movies "app" to get an movie object.
+
+we are goint to use the "Movie.objects.get()" method to get an movie from the data base.
+
+def detail(request, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
+    return render(request, "movies\detail.html", {"movie": movie})
+
+Then we need to create a new template in the "template\movies" folder.
+So add a new file "detail.html" to that folder.
+

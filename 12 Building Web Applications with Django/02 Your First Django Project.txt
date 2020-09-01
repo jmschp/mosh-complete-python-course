@@ -1,0 +1,45 @@
+02 Your First Django Project
+
+Open a terminal
+We first create a directory for our project.
+Navigate to that directory and install Django with pipenv.
+> pipenv install django
+
+This tutorial is base on version 2.1. But I used the latest version.
+
+Activate the virtual enviroment.
+>pipenv shell
+
+And the use Django Admin to create a new project with the command:
+> django-admin startproject <project name> .
+> django-admin startproject fidly .
+
+In our case we called the project fidly.
+The "." at the end indicates that the project must be created at the current directory.
+After running this comand this will create our Django Project, with the following organization.
+
+fidly == The folder created by us for the project. It is the container for this project
+    fidly == The folder create by Django with the project name when we run the command "django-admin startproject fidly ." It is a package, and it is essencial the core of our project
+        __init__.py == This tells Python to treat this directory as a package
+        asgi.py
+        settings.py == This file as several configurations settings for our project
+        urls.py == This is were we define various urls end point for our application
+        wsgi.py == wsgi is shorter for Web Server Gateway Interface The purpose of this file is to represent a standard interface between application writen in Python and web servers. 
+    manage.py == This file is created by Django, and we use it to perform administative task, such as start our web server, our migrate the database or populating it with data.
+
+Now with the project opened in VS Code we select the Python interpreter.
+And we are going to use the the "manage.py" to start our web server. With the following command:
+> python manage.py runserver
+
+By default this is going to start a development server on port 8000. If we already have an application listening on that port we can specify a port on that command like this:
+> python manage.py runserver 8080
+
+
+
+Pylint it is not familiared with Django objects, so we also need to install a package called "pylint-django"
+> pipenv install pylint-django
+
+The next step is to create a new file in the root of the project. And name it ".pylintrc". This file as no name, just has an extension.
+This is the configuration file for pylint, and there we need to tell pylint to load "pylint-django".
+Write the following code in the ".pylintrc" file:
+load-plugins=pylint-django

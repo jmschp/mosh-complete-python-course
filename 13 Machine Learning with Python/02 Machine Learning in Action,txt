@@ -1,0 +1,30 @@
+02 Machine Learning in Action
+
+Steps in Machine Learning:
+    1. Importa the Data
+The first step is to import our dta which often comes in the form of a ".csv" file. We mith have a dabase with a lot of data and we export it to a ".csv" file
+    
+    2. Clean the Data
+It involves task such as removing duplicated data, irrelevant data, if it is incomplete we remove it or complete it.
+If our data is texted base, like the name od countries, or genres of music, we need to convert them to numerical values.
+This steps dependes on the kind of data we are working with.
+    
+    3. Split the Data into Trianing / Test Steps
+We need to split it into two segments, one for training the model, other for testing it.
+For example if we have a 1000 pictures of cats and dogs, we can reserve 80% for training and 20% for testing.
+    
+    4. Create a Model
+This involves selecting a algorithm, to analise the data. There are a lot of ML algorithm out there. such as decision trees, neural networks, and so on.
+Each algorithm as pros and cons in terms of acuracy and performance. The choice of the algorithm depends on the kind of problem we are tring to slve and the input data.
+There are libraries that provide that algorithms
+
+    5. Train the Model
+We feed it the training data. Our model will then look for the patterns in the data.
+
+    6. Make Predictions.
+After it as been trained, we can start to make predictions.
+At first predictions are not always rigth, it is very likely they are inaccurate.
+
+    8. Eveluate and Improve
+Next we need to evaluate the predictions and measure their accuracy.
+Then we need to get back to our model and either fine tune the parameters of our model to produce a more accurate result, or select a differemt the algorithm.

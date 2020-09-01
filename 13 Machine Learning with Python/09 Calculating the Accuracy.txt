@@ -1,0 +1,32 @@
+09 Calculating the Accuracy
+
+In this lesson we are going to measure the accuracy of our model.
+To do so we need so split the data sets into two sets.
+One for training and another for testing.
+
+The usual rule esto alocate 70% to 80% of the data for training and the other 20% to 30% for testing.
+
+First we import the "train_test_split" function from the "sklearn.model_selection" module.
+This function takes tree arguments the input data set "X" the output data set "y", and a parameter to specify the size of the test data set "teste_size".
+This function returns a tuple, so we can unpack ti to four variables.
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, teste_size=0.2)
+
+In this case we set the size of the test data set to 0.2 or 20%.
+
+
+Now we pass to the model our input and output training data sets. To train the model.
+And we ask to make predictions base in our input test data set.
+
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+
+
+Now to calculate the accuracy we import "accuracy_score()" function from the "sklearn.metrics" module.
+The "accuracy_score()" takes two methods the output test data set "y_test" and our predictions.
+And returns an accuracy score betwenn 0 to 1.
+We store the result in the variable "model_score"
+
+model_score = accuracy_score(y_test, predictions)

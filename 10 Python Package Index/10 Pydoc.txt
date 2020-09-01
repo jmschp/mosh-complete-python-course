@@ -1,0 +1,17 @@
+10 Pydoc
+
+In Python we have a utility that comes with Python instalation, that allows us to see a documentation for a module.
+That module could be from the standard Python library or one of our own modules.
+
+In the terminal type
+> python -m pydoc <the name of the module>
+> python -m pydoc math
+
+Use space bar to go throw page on the documentatio and "q" to exit
+
+Use the following comand to write de documentation to a html file
+> python -m pydoc -w math
+
+To load this documentation do a webserver
+> python -m pydoc -p <port>
+> python -m pydoc -p 1234 

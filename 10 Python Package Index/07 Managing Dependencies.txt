@@ -1,0 +1,12 @@
+07 Managing Dependencies
+
+Run the following command to see a list of all the installed Dependencies
+> pipenv graph
+
+In case we want to update dependencies acording to the version of our package
+> pipenv update --outdated
+
+To update all packages in our project virtual enviroment
+> pipenv update
+Or we can specify the name of the package
+>pipenv update requests

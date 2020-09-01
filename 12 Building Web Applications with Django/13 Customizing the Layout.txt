@@ -1,0 +1,22 @@
+13 Customizing the Layout
+
+We are going to costumize the base.thml template.
+
+Go to https://getbootstrap.com/docs/4.5/components/alerts/
+
+To add Navbar https://getbootstrap.com/docs/4.5/components/navbar/
+
+Add the following code right after the <body> tag:
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+
+To costumize the movie table, by center it in the page.
+in the base.html file put it inside a container.
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+In the index.html add the following classes to the table tag
+<table class="table table-bordered table-hover">

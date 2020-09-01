@@ -1,0 +1,75 @@
+04 Views
+
+To create our first view in our movies app.
+We go to the "views.py" in the "fidly\movies" folder app, and define a function:
+
+def index(request):
+
+This name is arbitrary, but by convention we call it index for name the functions that represents the main page of an app.
+All the views functions should take a parameter called "request".
+The name is also arbritary, but by convention we call it "request" because the object that is passed to this function is an http request.
+
+When we send an http request to an endpoint, Django will figure out which view function should be called base in the configuration.
+
+In every view funtion we should return an http response.
+So we import in the "view.py" module the "HttpResponse" module.
+
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello World!")
+
+Now our function is is returning an HttpResponse with a string "Hello World!".
+
+Now we need to map this to a url. So in the "movies" app we add a new file "urls.py".
+In the "urls.py" we need to create a variable named "urlspattern". And set it to a list. This is a convention tha Django expects us to follow.
+In this list we add objects that map urls endpoints to our views functions.
+And for that we use the "path()" function from Django. So we need to import that funtion.
+
+from django.urls import path
+
+urlpatterns = [
+    path("")
+]
+
+We call the "path()" function to create a path object.
+As a first argument we spercify a urls endpoint.
+We are using an empty string that represents the root of this app.
+We use relative urls, because we should desing this apps for reusability. In case other developer wants to use our app and give it a diferent name.
+
+Now we need to map this to a view functions.
+So we need to import the "index()" function we created earlier, in our view module.
+To do so we use a relative import statment because the way Django works. So we use a "." that represents the current folder.
+
+Now in our "path()" faunction as a second argument we need to pass a reference to our "index()" function.
+As a best practice we should name this urls end point. To do so we use a keyword argument "name="
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index")
+]
+
+We refere to this as a urls configuration. So every app should have a urls configuration.
+
+Until this point our main app "fidly" as no knowlege of the "movies app".
+So we have to go the the main app "fidly" and there we have the "urls.py", that define the url configuration to our main app.
+In "urlpatterns" variable from that "urls.py" we need add "path()" to our movies app.
+
+We are telling our "fidly" app that any path that starts with "movies/", should be handed off to the url configuration in the movies app.
+And for that we import the "include()" function and specify the name of the module that contains the url configuration for the movies app.
+That is "movies.urls". We don't need to add the ".py" extension because Python will do that automatically.
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("movies/", include("movies.urls"))
+]
+
+So when ever we send a request that starts with movies, Django will chop off the prefix "movies/" and send the remaining string, to the "movies.urls" module.
+That is the reason why in the "urls.py" module from the "movies" app we use an empty string to represent the root of this app.
+
+Now if we navigate to the "http://127.0.0.1:8000/movies/" in our broweser we are going to see the 'Hello World!" message

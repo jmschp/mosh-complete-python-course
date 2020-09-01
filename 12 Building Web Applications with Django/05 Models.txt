@@ -1,0 +1,32 @@
+05 Models
+
+We are going to create the models for the "movies" app.
+This models are Python classes that we use to represent our aplication data.
+
+We open the "models.py" from the movies app.
+And create the classes we need, that must derive them from the "models.Model" class.
+In Django we have the "django.db" package and that package encapsulates all  the functionalaties to work with data base.
+In that packege we have the "models" module, and in that module we have a class called "Models".
+This class encapsulate functionalaties for storing, retrieving, filter a model object in a data base.
+
+class Genre(models.Model):
+    name = models.CharField(max_length=255)
+
+So we set the class atribute "name" that. And set it to a "CharField" with a maximum of 255 characters.
+With "max_length" set to 255 no genre can have more than 255 characters. This is also a security practice, because a hacker can not create a genre with more characters.
+
+Now we define our movies class.
+
+class Movie(models.Model):
+    title = models.CharField(max_length=255, unique=True)
+    relase_year = models.IntegerField()
+    number_in_stock = models.IntegerField(max_length=4)
+    daily_rate = models.FloatField()
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+
+In the "Movie" class we have several atributtes
+"title" that we set to a character field
+"relase_year" we set on an interger field with maximum lenght of 4 numbers
+"number_in_stock" we set on an interger field
+"daily_rate" we set to a float field.
+"genre" that we use to associate each movie with the "Genre" class. We set the parameter "on_delete" to models.CASCADE, this means that if we delete a genre all the movies associated with it will also be deleted.

@@ -1,0 +1,73 @@
+02 Pip
+
+ https://packaging.python.org/tutorials/installing-packages/nstalling-packages
+
+To install packages Python we use pip
+Open the terminal to pass comands to pip
+Mac users must use pip3 Windows user only pip
+
+Install pakage comand:
+> pip instal <name of the pakage>
+> pip install requests
+
+Upgrade pip command:
+> pip install --upgrade pip
+
+> List packages command:
+pip list
+
+This will list the packages installed and it versions. For Example:
+Package           Version
+----------------- ---------
+astroid           2.4.2
+certifi           2020.6.20
+chardet           3.0.4
+colorama          0.4.3
+idna              2.10
+isort             4.3.21
+lazy-object-proxy 1.4.3
+mccabe            0.6.1
+pip               20.1.1
+pylint            2.5.3
+requests          2.24.0
+setuptools        47.1.0
+six               1.15.0
+toml              0.10.1
+typed-ast         1.4.1
+urllib3           1.25.9
+wrapt             1.12.1
+
+requests          2.24.0 This version we see here, it's what its called semantic versioning.
+
+The first number "2" represents the major version
+The second number "24" represents the minor version
+The third number "0" represents the patch or bug fixes
+
+Install a different version command:
+> pip install requests==2.23.0
+This will uninstall the current version and install the version we want.
+
+Instal a different version command:
+> pip install requests==2.20.* 
+If we use an "*" this means to install the latest patch compatible with the minor version.
+In this case "2.20.*" will install the latest version compatible with "2.20"
+
+Install the lattest compatible version:
+> pip install requests~=2.20.0
+This will also install the latest compatible version. In this case for "2.20.0" will be "2.20.1"
+
+Instal a different version command:
+>pip install requests==2.* 
+If we use an "*" this means to install the latest patch compatible with the major version.
+In this case "2.*" will install the latest version compatible with "2."
+
+Uninstall package command:
+> pip uninstal <name of the pakage>
+> pip uninstall requests
+
+After installing we can use this mudules by importing them
+
+import requests
+
+response = requests.get("http://googel.com")
+print(response)

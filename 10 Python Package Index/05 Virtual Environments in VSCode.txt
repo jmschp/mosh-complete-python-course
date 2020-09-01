@@ -1,0 +1,20 @@
+05 Virtual Environments in VSCode
+
+If we try to run the program using code error we will get the same error
+
+ModuleNotFoundError: No module named 'requests'
+
+Because VSCode is running this programm using the Python interpreter that is installed globaly.
+And that Python interpreter can not find the module.
+To fix this problem we need to tell code runner to use the Python interpreter that is in our virtual enviroment.
+
+To get the virtual enviroment folder run the command:
+> pipenv --venv 
+
+In this case it will be:
+C:\Users\jmigu\.virtualenvs\10_Python_Package_Index-osiHzKSp\Scripts\python
+
+We need to go the the user setting of the file extension, and add this to the json file:
+    "code-runner.executorMap": {
+        "python": "C:\\Users\\jmigu\\.virtualenvs\\10_Python_Package_Index-osiHzKSp\\Scripts\\python",
+    }

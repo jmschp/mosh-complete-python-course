@@ -1,0 +1,47 @@
+03 Your First App.txt
+
+In Django a project can contain multiple apps
+
+DjangoProject
+    App1
+    App2
+    App3
+    App4
+
+This apps don't represent that entire application. Each app represents a small part of that application, that is focused on a functionality.
+
+For example, if we are building a website like Amazon, it as several functional areas.
+
+Amazon == DjangoProject
+    Costumer Service
+    Order
+    Shipping
+    Etc...
+
+Each functional area includes a buch of highly related funtions.
+So with this arquitecture we can breakdown a large complex project, into smaller, more manageablem and more amntainable apps.
+Also we can reuse this apps in other Django Projects. For example we can build an app that represents a blog, and the we can use this app in any website that need a blog.
+
+To create an app navigate to the project folder and use the following command:
+> python manage.py startapp <app name>
+> python mange.py startapp movies
+
+In our case we called the app "movies".
+
+This will create a new directory in our project with the following structure.
+
+movies == The folder created inside our project by the command startapp.
+    migrations
+__init__.py == This tells Python to treat this directory as a package. So we can distribute this package in the future, for other developers to download it and use in their application
+admin.py == This is were we define how the administration area for managing the movies will look like.
+apps.py == This is used to store various configurations settings for this app.
+models.py == Here we define classes that represent the domanin od this app. For example in the domain of movies we could have classes like movie, genre, and so on.
+tests.py == This is were we write automated test for this app.
+views.py == This is were we define our view functions.
+
+View functions is a funtions that takes a request and returns a response
+An example
+Let's say we navigate to our website "http://127.0.0.1:8000/movies"
+When we send a request to this endpoint, Django is going to take this request pass it to a function which we call a View Function, that View functions takes our request and returns a response.
+That can be, simple text, html, json, xml, image, and so on.
+

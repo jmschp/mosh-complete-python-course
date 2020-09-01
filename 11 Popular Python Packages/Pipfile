@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+twilio = "*"
+pylint = "*"
+request = "*"
+beautifulsoup4 = "*"
+selenium = "*"
+pypdf4 = "*"
+openpyxl = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.7"

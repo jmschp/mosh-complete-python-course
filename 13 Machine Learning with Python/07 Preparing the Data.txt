@@ -1,0 +1,70 @@
+07 Preparing the Data
+
+
+We are goint o split this data set in to separate data sets.
+
+One with the first two columns "age" and "genre", which we refere to as input set.
+And the other with the last column "genre" that is the output set.
+The output set contains the predections.
+
+We are going to use the ".drop() method to split this data set.
+This method tkaes the following parameters.
+
+music_data.drop(
+    labels=None,
+    axis=0,
+    index=None,
+    columns=None,
+    level=None,
+    inplace=False,
+    errors='raise',
+)
+
+The parameter we are going to use in this data set is columns. We set it to "genre" to drop the "genre" column.
+The set it to avariable. By convetnion we use "X" to represente the input set.
+X = music_data.drop(columns="genre")
+Result:
+	age	gender
+0	20	1
+1	23	1
+2	25	1
+3	26	1
+4	29	1
+5	30	1
+6	31	1
+7	33	1
+8	37	1
+9	20	0
+10	21	0
+11	25	0
+12	26	0
+13	27	0
+14	30	0
+15	31	0
+16	34	0
+17	35	0
+
+We set the output data "genre" to the variable "y". We use square brackets to get all the values in a column.
+y = music_data["genre"]
+Result:
+0        HipHop
+1        HipHop
+2        HipHop
+3          Jazz
+4          Jazz
+5          Jazz
+6     Classical
+7     Classical
+8     Classical
+9         Dance
+10        Dance
+11        Dance
+12     Acoustic
+13     Acoustic
+14     Acoustic
+15    Classical
+16    Classical
+17    Classical
+Name: genre, dtype: object
+
+With steps we prepared our data.

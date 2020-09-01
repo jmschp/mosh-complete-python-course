@@ -1,0 +1,25 @@
+03 Libraries and Tools
+
+The must popular libraries in python for Machine Learning are:
+
+1. Numpy - which provides a multidimensional array.
+2. Pandas - it is a data analisis librarie that provides a concets know as data frame. A data fram is a two dimensionl dta structure similar to an excel spreadsheet
+3. MatPlotLib - It is a two dimensional ploting librarie to create graph and plots
+4. Scikit-Learm - It is one of the most popular Machine Learnin libraries, that provies commun algorithms like Decision Trees, Nural Networks, and so on.
+
+When working the ML projects we use an enviroment called Jupyter to write our code.
+We could use VS Code our other code editor, but Jupyter is more pratical and provides better ways to visualize the data. It make it easy to inspect our data.
+https://jupyter.org/
+
+To install Jupyter we are going to use a platrfom called Anaconda
+Anaconda will install Jupyter and all the popular data science libraries. So we don't have to maualy install then using pip.
+https://www.anaconda.com/
+
+Now in a terminal window type the following command to start the jupyter notbook server in our machine.
+This will open a browser
+> jupyter notebook
+
+Then in  the desired folder click "New" and cretae a notbook for Python 3.
+Give it a name.
+This will create a file in that folder with the extension ".jpynb" this is a Jupyter notebook.
+It is similar to the ".py" files, but inclues additional data that Jupyter uses to execute our code.

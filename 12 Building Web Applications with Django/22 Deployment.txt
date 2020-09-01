@@ -1,0 +1,48 @@
+22 Deployment
+
+To deploy to the cloud service first we are going to commit our code to a git repository.
+We will set a local repository and then a repository in Heroku, taht mirros our local repository.
+When we are ready to deploy we push the changes form our local repository to a repository in Heroku.
+
+1. Initialize a local git repository in the root folder of our app.
+> git init
+
+2. Add file to git everytime we make changes to the code.
+We use the "." to add all the new and modified files and folders.
+This adds them to the staging area and prepares them to be included in the next commit.
+> git add .
+
+3. Add a commit
+We use the argumente "-m" to add a message to the commit.
+> git commit -m "My message"
+> git commit -m "Initial commit"
+
+4. Now we need to create a Heroku app using Heroku CLI.
+First we login with teh following commad.
+> heroku login
+
+5. Then we run the command to create a new Heroku app.
+> heroku create
+We can also give an name to the app. But that name has to be unique.
+> heroku create fidly
+If this command terminates successful 3 thing happen.
+Heroku will create an app with an address;
+Heroku will create a git repository with an address;
+And ten it teel our current local repository, about this new Heroku repository.
+We will see in the terminal:
+Creating app... done, ⬢ intense-anchorage-19225
+https://intense-anchorage-19225.herokuapp.com/ | https://git.heroku.com/intense-anchorage-19225.git
+
+6. Now to deploy our application we need to run:
+> git push heroku master
+This will push our local mater branch to the heroku repository.
+
+7. Now we need to tell Heroku to allocate on ewebserver to this application.
+> heroku ps:scale web=1
+With this line of code we are allocating on ewebserver to our app.
+
+8. If we have not done this before, we have to add the address of our app to the "ALLOWED_HOSTS" list in the "setting.py" module.
+ALLOWED_HOSTS = [
+    "intense-anchorage-19225.herokuapp.com"
+]
+Then we need to update our local repository, and then push it to Heroku

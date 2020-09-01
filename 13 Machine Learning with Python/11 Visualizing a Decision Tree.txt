@@ -1,0 +1,24 @@
+11 Visualizing a Decision Tree
+
+
+The Decision Tree algorihms are the easiest to understand.
+In this section we are goint to export our model in a visual format.
+
+first we need to import the "tree" module from "sklearn".
+The "tree" object has a method to export the Decision Tree model in a graphical format.
+
+tree.export_graphviz(trained_model, # As a first parameter we select our model
+                    out_file="music-recommender.dot", # We set "out_file" to the name and extension of the file that will be saved.
+                    feature_names=["age", "gender"], # we feature names to "age" and genre, so we can see the rules in our notes 
+                    class_names=sorted(y.unique()), # we set class_name to the unique list of genres, so that displays the class for each note.
+                    label="all", # We set labes to "all" so every note as labels we can read
+                    rounded=True, # We set round to "true" so the box have rounded corners
+                    filled=True # We set filled to "true" so each box is filled with a color
+                    )
+
+This will create the dot file music-recommender.dot
+The ".dot" is format is textal langage for describing graphs
+
+To visualise the graph intall the followin extension
+Graphviz (dot) language support for Visual Studio Code.
+> in th menu select open preview to teh side.

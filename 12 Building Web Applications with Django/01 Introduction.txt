@@ -1,0 +1,6 @@
+01 Introduction
+
+In this sections we are going to buld a web application with Django.
+
+With a list of movies and an API.
+And deploy it to a cloud platform.
