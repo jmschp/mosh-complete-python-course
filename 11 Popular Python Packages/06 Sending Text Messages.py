@@ -1,9 +1,10 @@
 # 06 Sending Text Messages
 
 from twilio.rest import Client # This class represents a client to twilio Rest API
+import config
 
-account_sid = "AC61b41543960b1719fafa3fb0a6a3201c"
-auth_token = "ec9266ca025d0d0f918cc1192b177d0b"
+account_sid = config.twilio_account_sid
+auth_token = config.twilio_auth_token
 
 client = Client(account_sid, auth_token)
 
