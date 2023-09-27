@@ -37,3 +37,4 @@ class NetworkStream(Stream):
 # We only have two levels of inherante
 # And we don't have multiple inheritance
 #good
+#test
