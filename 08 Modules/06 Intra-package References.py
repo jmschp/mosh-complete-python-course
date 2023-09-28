@@ -1,6 +1,6 @@
 # 06 Intra-package References
 
-#for intra packages reference there two ways to inport a pakage.
+#for intra packages reference there two ways to import a package.
 # Relative and Absolut
 
 # Supposing we were working on our "eshopping.py" and need to import a function from "contact.py"
@@ -11,7 +11,8 @@ contact.contact_costumer()
 
 
 
-from ..costumer import contact # We use the "." operator to navigate to the parent folders.
+from .ecommerce.costumer import contact # We use the "." operator to navigate to the parent folders.
+# "one dot ." navigate to the current folder
 
 contact.contact_costumer()
 
