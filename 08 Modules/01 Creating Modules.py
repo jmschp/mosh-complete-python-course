@@ -16,8 +16,9 @@
 # To import functions from one module we can use two ways.
 
 from sales import calc_tax, calc_shipping # In here we select the module and then separated by comma each of the functions.
+
 # Some tutorials teach to import multiple functions using an "*" "from sales import *".
-# This is a bad practice because if we import everything blinding, some of our functions or variables in our "sales.py" module may override some objects with the same name in the current module.
+from sales import *  # This is a bad practice because if we import everything blinding, some of our functions or variables in our "sales.py" module may override some objects with the same name in the current module.
 
 calc_tax() # And the we can call each of the imported function in our new file
 calc_shipping()
