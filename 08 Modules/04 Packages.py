@@ -2,10 +2,9 @@
 
 # As our application grows we are going to organize it in folder. Separating the modules in folders for a better organization.
 # Here we created a folder "ecommerce" and put the "esales.py" module there.
-# We have to add a "__init__.py" file to the "ecommerce" folder.
-# When we do that Python treats that folder as a Package.
+# We have to add a "__init__.py" file to the "ecommerce" folder, When we do that Python treats that folder as a Package.
 # A Package is a countainer for one or more modules.
-# In file sytems terms a Pakages is mapped to a directory and a module is mapped to a file.
+# In file sytems terms a [Pakages] is mapped to a [directory] and a [module] is mapped to a [file].
 
 import ecommerce.esales # To import the "esales.py" module we have to prefix it with the name of the package.
 
