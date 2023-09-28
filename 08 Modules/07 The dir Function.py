@@ -11,5 +11,5 @@ print(dir(eshopping))
 # As well as other magic methods that are automataclly created.
 
 print(eshopping.__name__) # That returns the name of our module
-print(eshopping.__package__) # To get the name of the package
-print(eshopping.__file__) # To get the path to the file
+print(eshopping.__package__) # To get the name of the package that module belong to 
+print(eshopping.__file__) # To get the path to the file on your system
